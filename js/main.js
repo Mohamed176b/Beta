@@ -1,0 +1,11 @@
+// Mega menu appers
+var serv_button = document.getElementById("go_to_serv");
+var mega_menu = document.getElementById("mega_menu");
+serv_button.addEventListener("click", function() {
+    mega_menu.classList.add("mega-menu-click");
+});
+document.addEventListener("click", function(event) {
+    if (!mega_menu.contains(event.target) && !serv_button.contains(event.target)) {
+        mega_menu.classList.remove("mega-menu-click");
+    }
+});
