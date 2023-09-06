@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="حلول إبداعية لاحتياجاتك الرقمية">
     <!-- Page Icon -->
-    <link rel="icon" href="imgs/">
+    <link rel="icon" href="imgs/beta.png">
     <!-- Render all elements normally -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Font awesome library -->
@@ -18,18 +18,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <title>Beta</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("ZqamJTBh-P6WKBgO9");
+        })();
+    </script>
 </head>
 <body>
     <!-- Start Header -->
     <div class="header" id="header">
         <div class="container">
-            <!-- <a href="index.html" class="logo"><img src="imgs/egg.png" alt="Beta logo"></a> -->
-            <a href="index.html" class="logo">Beta</a>
+            <a href="index.html" class="logo"><img src="imgs/beta2.png" alt="Beta logo"></a>
+            <!-- <a href="index.html" class="logo">Beta</a> -->
             <ul class="main-nav">
                 <li><a href="index.html">الصفحة الرئيسية</a></li>
                 <li><a href="#about">من نحن</a></li>
-                <li>
-                    <a id="go_to_serv">الخدمات</a>
+                <li id="go_to_serv">
+                    <a>الخدمات</a>
                     <!-- Start Megamenu -->
                     <div class="mega-menu" id="mega_menu">
                         <div class="image">
@@ -338,7 +344,70 @@
         </div>
     </div>
     <!-- End Testimonials -->
-
+    <!-- Start contact-form -->
+    <div class="contact-form" id="contact">
+        <div class="image">
+            <div class="content">
+                <h2>تواصل معنا</h2>
+                <p>
+                    قم بالتواصل معنا بإرسال استفسارتك وارائك عبر البريد الالكتروني.
+                </p>
+                <img src="imgs/mail.png" alt="vecteezy.com" />
+            </div>
+        </div>
+        <div class="form">
+            <div class="content">
+                <h2> ارسال استفسار او تعليق</h2>
+                <form class="form">
+                    <input class="name input" type="text" placeholder="Your Name" name="name" id="name"/>
+                    <input class="email input" type="email" placeholder="Your Email" name="email" id="email" />
+                    <textarea class="msg input" placeholder="Tell Us About Your Needs" name="message" id="msg"></textarea>
+                    <!-- <input type="submit" value="Send" onclick="sendMail()" /> -->
+                    <button class="input submint" onclick="sendMail()">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End contact-form -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="box">
+                <h3>Beta Corporation</h3>
+                <ul class="social">
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:Beta.ContactEM@gmail.com" class="gmail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    تواصل معنا عبر مواقع التواصل الاجتماعي وقم بمتابعتنا لتتابع تحديثات خدماتنا الجديدة.
+                </p>
+            </div>
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info">Egypt, Cairo</div>
+                </div>
+            </div>
+            <div class="box footer-gallery">
+                <img src="imgs/beta_logo2.png" alt="img" />
+            </div>
+        </div>
+        <p class="copyright">Powerd By Beta Corporation</p>
+    </div>
+    <!-- End Footer -->
     <script src="js/main.js"></script>
 </body>
 </html>
