@@ -1,11 +1,16 @@
-// Mega menu appers
-var serv_button = document.getElementById("go_to_serv");
-var mega_menu = document.getElementById("mega_menu");
-serv_button.addEventListener("pointerdown", function() {
-    mega_menu.classList.add("mega-menu-click");
-});
-document.addEventListener("pointerup", function(event) {
-    if (!mega_menu.contains(event.target) && !serv_button.contains(event.target)) {
-        mega_menu.classList.remove("mega-menu-click");
-    }
-});
+function sendMail() {
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        msg: document.getElementById("msg").value,
+    };
+    const serviceID = "service_xw76k29"; 
+    const templateID = "template_3th2bs6"; 
+    emailjs.send(serviceID, templateID, params) 
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("تم الارسال")
+    }, function(error) {
+        console.log('FAILED...', error);
+    });
+}
