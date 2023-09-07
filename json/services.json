@@ -1,0 +1,72 @@
+[
+    {
+        "pageTitle" : "تصميم المواقع",
+        "mainTitle" : "Web Design",
+        "mainPargraph" : "خدمات تصميم الويب بواسطة مصممي الويب المحترفين",
+        "backgroundImage" : "web.jpg",
+        "landingColor" : "#f440369e",
+        "allDescriptions" : [
+            "هل تبحث عن خدمة تصميم ويب احترافية يمكنها إنشاء موقع ويب مذهل لشركتك أو موقعك الشخصي؟ إذا كان الأمر كذلك، فقد جئت إلى المكان الصحيح. Beta  Web Design Service هي  خدمة رائدة في تصميم الويب تقدم حلول تصميم مواقع ويب مخصصة للعملاء في جميع أنحاء العالم. سواء كنت بحاجة إلى Landing Page  بسيطة، أو موقع تجارة إلكترونية معقد، أو أي شيء بينهما، فلدينا المهارات والخبرة اللازمة لتقديم موقع ويب يلبي احتياجاتك ويتجاوز توقعاتك.",
+            "- استشارة مجانية مع أحد خبراء تصميم المواقع لدينا لفهم أهدافك ورؤيتك وهوية علامتك التجارية. <br>- تصميم سريع الاستجابة يتكيف مع أي جهاز وحجم شاشة ومتصفح.<br>- إعداد أساسي لتحسين محركات البحث (SEO) يساعد موقعك على الويب في الحصول على مرتبة أعلى على Google ومحركات البحث الأخرى.<br>- نظام إدارة المحتوى (CMS) الذي يسمح لك بتحديث محتوى موقع الويب الخاص بك وإدارته بسهولة.<br>- مجموعة متنوعة من التصميمات الجذابة والميزات المتقدمة للاختيار من بينها، مثل رؤوس الفيديو وشرائح الصور والمعارض والمدونات والحجوزات عبر الإنترنت والمزيد.",
+            "باستخدام خدمة تصميم الويب من Beta ، يمكنك إطلاق موقع ويب يعكس علامتك التجارية، ويجذب عملائك، ويحقق إيرادات لشركتك. خبراء موقعنا متواجدون هنا للاستماع إلى أفكارك وترجمتها إلى واقع. قم بالتواصل معنا اليوم للبدء في مشروع تصميم الويب الخاص بك. "
+        ],
+        "images" : "web",
+        "imgCount" : "24"
+    },
+    {
+        "pageTitle" : " تصميم تطبيقات الهاتف",
+        "mainTitle" : "Mobile Programming",
+        "mainPargraph" : "خدمات تصميم برامج الهاتف المحمول",
+        "backgroundImage" : "mob.jpg",
+        "landingColor" : "#0096889e"
+    },
+    {
+        "pageTitle" : " تصميم برامج Desktop",
+        "mainTitle" : "Desktop Applications",
+        "mainPargraph" : "خدمات تصميم برامج الحاسب الشخصي",
+        "backgroundImage" : "des.png",
+        "landingColor" : "#03a9f4be"
+    },
+    {
+        "pageTitle" : "خدمة الشحن والتوصيل",
+        "mainTitle" : "Shipping and delivery",
+        "mainPargraph" : "خدمة طلب المنتجات وشحنها وتوصيلها إلى أي مكان داخل مصر",
+        "backgroundImage" : "del.jpg",
+        "landingColor" : "#f44036ce"
+    },
+    {
+        "pageTitle" : "تصميمات جرافيك",
+        "mainTitle" : "Graphic Design",
+        "mainPargraph" : "خدمة تصميم ما في مخيلتك",
+        "backgroundImage" : "soc.jpg",
+        "landingColor" : "#009688be"
+    },
+    {
+        "pageTitle" : "تسويق وإدارة صفحات",
+        "mainTitle" : "Marketing",
+        "mainPargraph" : "خدمة التسويق والإعلان هي خدمة تعمل على الترويج لمنتجاتك. ",
+        "backgroundImage" : "ads.jpg",
+        "landingColor" : "#03a9f4ce"
+    },
+    {
+        "pageTitle" : "تصميم موشن جرافيك",
+        "mainTitle" : "Motion Graphic",
+        "mainPargraph" : "نقوم برسم وتحريك ما بمخيلتك إلى الواقع",
+        "backgroundImage" : "mot.gif",
+        "landingColor" : "#ff00009e"
+    },
+    {
+        "pageTitle" : "مونتاج فيديو",
+        "mainTitle" : "Video Editing",
+        "mainPargraph" : "نقوم بعمل مونتاج على الفيديو باحترافيه مذهله",
+        "backgroundImage" : "edi.png",
+        "landingColor" : "#0096889e"
+    },
+    {
+        "pageTitle" : "ابحاث، عروض تقديميه وبرامج Excel",
+        "mainTitle" : "Research, presentations and Excel programs",
+        "mainPargraph" : "كل ما عن برامج Microsoft Ofiice",
+        "backgroundImage" : "ofc.jpg",
+        "landingColor" : "#03a9f4be"
+    }
+]
