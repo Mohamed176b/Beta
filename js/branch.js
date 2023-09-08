@@ -55,24 +55,27 @@ window.onload = function () {
                 document.getElementById("head2").innerHTML = "تشمل خدمة تصميم الويب لدينا ما يلي:"
             }
         });
-};
-
-let flag = 0;
-document.getElementById("show").onclick = () => {
-    if (flag === 0) {
-        document.getElementById("gallery").style.overflow = "visible";
-        document.getElementById("gallery").style.height = "auto";
-        document.getElementById("show").innerHTML = "شاهد أقل";
-        flag = 1;
-        document.getElementById("title-gallery").scrollIntoView();
-    } else {
-        document.getElementById("gallery").style.overflow = "hidden";
-        if (window.matchMedia(' (max-width: 767px)')) {
-            document.getElementById("gallery").style.height = "1150px";
+    
+    
+    
+    let flag = 0;
+    document.getElementById("show").onclick = () => {
+        if (flag === 0) {
+            document.getElementById("gallery").style.overflow = "visible";
+            document.getElementById("gallery").style.height = "auto";
+            document.getElementById("show").innerHTML = "شاهد أقل";
+            flag = 1;
+            document.getElementById("title-gallery").scrollIntoView();
         } else {
-            document.getElementById("gallery").style.height = "870px";
+            document.getElementById("gallery").style.overflow = "hidden";
+            if (window.matchMedia(' (max-width: 767px)')) {
+                document.getElementById("gallery").style.height = "1150px";
+            } else {
+                document.getElementById("gallery").style.height = "870px";
+            }
+            document.getElementById("show").innerHTML = "شاهد أكثر"
+            flag = 0;
         }
-        document.getElementById("show").innerHTML = "شاهد أكثر"
-        flag = 0;
     }
-}
+
+};
