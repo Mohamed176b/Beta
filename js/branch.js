@@ -25,7 +25,8 @@ window.onload = function () {
                 landing_color = json[serv].landingColor,
                 descriptions = json[serv].allDescriptions,
                 folderOfImages = json[serv].images,
-                numberOfImages = json[serv].imgCount;
+                numberOfImages = json[serv].imgCount,
+                phoneNumber = json[serv].phone;
             folder = folderOfImages;
             imageCount = numberOfImages;
             // Store all descriptions in array
@@ -36,7 +37,10 @@ window.onload = function () {
             }
 
             for (let i = 1; i <= numberOfImages; i++){
-                document.getElementById("gallery").innerHTML += `<div class="gallery-box" id="gallery-box"><a href="../imgs/${folderOfImages}/${i}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folderOfImages}/${i}.png" alt="Image ${i}" id="imges${i}"/></a></div>`;
+                document.getElementById("gallery").innerHTML += `
+                                                                <div class="gallery-box" id="gallery-box">
+                                                                    <a href="../imgs/${folderOfImages}/${i}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folderOfImages}/${i}.png" alt="Image ${i}" id="imges${i}"/></a>
+                                                                </div>`;
             }
 
             // Add all param into HTML document
@@ -49,7 +53,11 @@ window.onload = function () {
             for (let i = 0; i < paraCount; i++) {
                 document.getElementById(`para${i + 1}`).innerHTML = descArr[i];
             }
-
+            document.getElementById("contact").innerHTML = `
+                                                            <div class="contact-image">
+                                                                <a href="https://wa.me/+20${phoneNumber}" target="_blank"><img src="../imgs/whatsapp_logo.png" alt="vecteezy.com"></a>
+                                                                <h2>  تواصل معنا عبر الواتساب لطلب الخدمة أو الاستفسارات</h2>
+                                                            </div>`;
             // Exceptions
             if (serv === 0) {
                 document.getElementById("head2").innerHTML = "تشمل خدمة تصميم الويب لدينا ما يلي:"
