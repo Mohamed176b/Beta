@@ -25,6 +25,7 @@ html {
 }
 body {
     font-family: "Cairo", sans-serif;
+    background-color: #ddd;
 }
 a {
     text-decoration: none;
@@ -452,9 +453,87 @@ ul {
 /* End Work Steps (_About section) */
 
 /* Start Images Slideshow */
+.title-gallery {
+    margin-top: 40px;
+}
+.gallery {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    height: 870px;
+    overflow: hidden;
+}
+.gallery-box {
+    overflow: hidden;
+    max-width: 280px;
+    height: 280px;
+    border: solid 2px var(--main-color);
+    margin-left: 5px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+}
+.gallery-box img {
+    transition: .5s;
+    max-width: 280px;
+}
+.gallery-box img:hover {
+    scale: 105%;
+    rotate: 5deg;
+}
+@media (max-width: 767px) {
+    .gallery-box img {
+        max-width: 360px;
+    }
+    .gallery-box {
+        max-width: 360px;
+        height: 360px;
+        margin: 10px 0px;
+    }
+    .gallery {
+        height: 1150px;
+    }
+}
+.show {
+    text-transform: uppercase;
+    margin: 10px auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+    cursor: pointer;
+    font-weight: bold;
+}
+.show:hover {
+    background-color: var(--main-color);
+    color: white;
+}
 
 
-.slider-container {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .slider-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -530,7 +609,7 @@ ul {
         border-radius: 4px;
     }
 }
-
+ */
 
 
 /* End Images Slideshow */
@@ -555,8 +634,16 @@ ul {
 
 
 
-
-/* Start animations */
+/* Start Animation */
+@keyframes up-and-down {
+    0%,
+    100% {
+        top: 0px;
+    }
+    50% {
+        top: -50px;
+    }
+}
 @keyframes bouncing {
     0%,
     10%,
@@ -571,7 +658,33 @@ ul {
         transform: translateY(-15px);
     }
 }
-/* End animations */
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+/* End Animation */
 /* Star icons colors */
 .fa-html5 {
     color: tomato;
