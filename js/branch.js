@@ -36,7 +36,7 @@ window.onload = function () {
             }
 
             for (let i = 1; i <= numberOfImages; i++){
-                document.getElementById("sliderjs").innerHTML += `<a href="../imgs/${folderOfImages}/${i}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folderOfImages}/${i}.png" alt="Image ${i}" id="imges${i}"/></a>`;
+                document.getElementById("gallery").innerHTML += `<div class="gallery-box" id="gallery-box"><a href="../imgs/${folderOfImages}/${i}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folderOfImages}/${i}.png" alt="Image ${i}" id="imges${i}"/></a></div>`;
             }
 
             // Add all param into HTML document
@@ -54,68 +54,25 @@ window.onload = function () {
             if (serv === 0) {
                 document.getElementById("head2").innerHTML = "تشمل خدمة تصميم الويب لدينا ما يلي:"
             }
-            for (let i = 1; i <= numberOfImages; i++){
-                if (currntImage === i) {
-                    continue
-                } else {
-                    document.getElementById(`imges${i}`).classList.add("hide-image")
-                    document.getElementById(`imges${i}`).classList.remove("display-image")                   
-                }
-            }
-            styleSheet.insertRule(`.slide-container::before {background-image: url(../imgs/${folderOfImages}/${currntImage}.png) !important; }`, styleSheet.cssRules.length);
-            
-            
-            document.getElementById("prev").style.cursor = "auto"
-            document.getElementById("prev").style.backgroundColor = "#777"
         });
 };
 
-
-function putImages() {
-    let flag = 0;
-    for (let i = 1; i <= imageCount; i++){
-        document.getElementById("sliderjs").innerHTML += `<a href="../imgs/${folder}/${i}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folder}/${i}.png" alt="Image ${i}" id="imges${i}"/></a>`;
-    }
-    for (let i = 1; i <= imageCount; i++){
-        if (currntImage === i && flag === 1) {
-            flag++;
-            continue
+let flag = 0;
+document.getElementById("show").onclick = () => {
+    if (flag === 0) {
+        document.getElementById("gallery").style.overflow = "visible";
+        document.getElementById("gallery").style.height = "auto";
+        document.getElementById("show").innerHTML = "شاهد أقل";
+        flag = 1;
+        document.getElementById("title-gallery").scrollIntoView();
+    } else {
+        document.getElementById("gallery").style.overflow = "hidden";
+        if (window.matchMedia(' (max-width: 767px)')) {
+            document.getElementById("gallery").style.height = "1150px";
         } else {
-            document.getElementById(`imges${i}`).classList.add("hide-image")
-            document.getElementById(`imges${i}`).classList.remove("display-image")                   
+            document.getElementById("gallery").style.height = "870px";
         }
+        document.getElementById("show").innerHTML = "شاهد أكثر"
+        flag = 0;
     }
-    styleSheet.insertRule(`.slide-container::before {background-image: url(../imgs/${folder}/${currntImage}.png) !important; }`, styleSheet.cssRules.length);
-}
-
-
-var styleSheet = document.styleSheets[0];
-document.getElementById("next").onclick = () => {
-    if (currntImage < imageCount) {
-        currntImage++;
-        document.getElementById("sliderjs").innerHTML = `<a href="../imgs/${folder}/${currntImage}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folder}/${currntImage}.png" alt="Image ${currntImage}" id="imges${currntImage}"/></a>`;
-        styleSheet.insertRule(`.slide-container::before {background-image: url(../imgs/${folder}/${currntImage}.png) !important; }`, styleSheet.cssRules.length);
-        putImages();
-        if (currntImage == imageCount) {
-            document.getElementById("next").style.cursor = "auto"
-            document.getElementById("next").style.backgroundColor = "#777"
-        }
-        if (currntImage === 2) {
-            document.getElementById("prev").style.cursor = "pointer"
-            document.getElementById("prev").style.backgroundColor = "#B0DAFF"
-        }
-    } else {{}}
-}
-
-document.getElementById("prev").onclick = () => {
-    if (currntImage > 1) {
-        currntImage--;
-        document.getElementById("sliderjs").innerHTML = `<a href="../imgs/${folder}/${currntImage}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folder}/${currntImage}.png" alt="Image ${currntImage}" id="imges${currntImage}"/></a>`;
-        styleSheet.insertRule(`.slide-container::before {background-image: url(../imgs/${folder}/${currntImage}.png) !important; }`, styleSheet.cssRules.length);  
-        putImages();
-        if (currntImage === 1) {
-            document.getElementById("prev").style.cursor = "auto"
-            document.getElementById("prev").style.backgroundColor = "#777"
-        }
-    } else { { } }
 }
