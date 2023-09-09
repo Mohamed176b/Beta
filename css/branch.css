@@ -119,8 +119,8 @@ ul {
         linear-gradient(225deg, #ececec 25%, transparent 25%);
 }
 .spikes2::after {
-    background-image: linear-gradient(135deg, white 25%, transparent 25%),
-        linear-gradient(225deg, white 25%, transparent 25%);
+    background-image: linear-gradient(135deg, #B0DAFF 25%, transparent 25%),
+        linear-gradient(225deg, #B0DAFF 25%, transparent 25%);
 }
 /* End Global Rules */
 
@@ -470,6 +470,7 @@ ul {
     flex-wrap: wrap;
     height: 870px;
     overflow: hidden;
+    justify-content: center;
 }
 .gallery-box {
     overflow: hidden;
@@ -518,6 +519,46 @@ ul {
     background-color: var(--main-color);
     color: white;
 }
+.big-video-container {
+    background-color: var(--secondry-color);
+    padding: 20px 0px 30px;
+}
+.video-container iframe{
+    width: 560px;
+    height: 315px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.video-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main-title-video {
+    font-size:23px;
+}
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.video-gallery .video {
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.video-gallery .video video{
+    width: 560px;
+}
+@media (max-width: 767px) {
+    .video-gallery .video video{
+        width: 360px;
+    }
+    .video-gallery .video{
+        margin-left: 0px;
+    }
+}
+/* End Images Slideshow */
 /* Start Contact */
 .contact {
     background-image: url(../imgs/watermark.png);
@@ -575,7 +616,7 @@ ul {
     right: -120px;
 }
 .dots-down{
-    left: -88px;
+    left: -60px;
     bottom: -75px;
 }
 @media (max-width: 767px) {
