@@ -35,13 +35,31 @@ window.onload = function () {
             for (let i = 0; i < paraCount; i++) {
                 descArr[i] = descriptions[i];
             }
-
-            for (let i = 1; i <= numberOfImages; i++){
-                document.getElementById("gallery").innerHTML += `
-                                                                <div class="gallery-box" id="gallery-box">
-                                                                    <a href="../imgs/${folderOfImages}/${i}.png" data-lightbox="models"><img class="diplay-image" src="../imgs/${folderOfImages}/${i}.png" alt="Image ${i}" id="imges${i}"/></a>
-                                                                </div>`;
+            let imageType;
+            if ((serv + 1) === 1 || (serv + 1) === 5) {
+                imageType = ".png";
+            } else if ((serv + 1) === 2 || (serv + 1) === 3 || (serv + 1) === 6 || (serv + 1) === 9) {
+                imageType = ".jpg";
             }
+            if ((serv + 1) === 1 || (serv + 1) === 2 || (serv + 1) === 3 || (serv + 1) === 5 || (serv + 1) === 6 || (serv + 1) === 9) {
+                for (let i = 1; i <= numberOfImages; i++){
+                    document.getElementById("video-container-gallery").style.display = "none";
+                    document.getElementById("gallery").innerHTML += `
+                                                                    <div class="gallery-box" id="gallery-box">
+                                                                        <a href="../imgs/${folderOfImages}/${i}${imageType}" data-lightbox="models"><img class="diplay-image" src="../imgs/${folderOfImages}/${i}${imageType}" alt="Image ${i}" id="imges${i}"/></a>
+                                                                    </div>`;
+                }
+            } 
+            else {
+                document.getElementById("image-containe").style.display = "none";
+                for (let i = 1; i <= numberOfImages; i++){
+                    document.getElementById("video-gallery").innerHTML += `
+                                                                            <div class="video">
+                                                                                <video src="../imgs/${folderOfImages}/${i}.mp4" controls></video>
+                                                                            </div>`;
+                }
+            }
+            
 
             // Add all param into HTML document
             document.title = page_title;
@@ -61,6 +79,15 @@ window.onload = function () {
             // Exceptions
             if (serv === 0) {
                 document.getElementById("head2").innerHTML = "تشمل خدمة تصميم الويب لدينا ما يلي:"
+            } else if (serv === 2) {
+                document.getElementById("big-video-container").innerHTML = `
+                                                                            <h2 class="main-title main-title-video"> بعض من أعمالنا الأخرى <br>المتعلقه بالاسكريبتات</h2>
+                                                                            <div class="container video-container" id="video-container">
+                                                                                <iframe frameborder="0" src="https://www.youtube.com/embed/tKt_tMNeehc?start=464"></iframe>
+                                                                                <iframe frameborder="0" src="https://www.youtube.com/embed/aZL4Y2-Fe0c?start=14"></iframe>
+                                                                                <iframe frameborder="0" src="https://www.youtube.com/embed/YYtXv7QcJoY?start=14"></iframe>
+                                                                                <iframe frameborder="0" src="https://www.youtube.com/embed/41UGmLnBCqM?start=0"></iframe>
+                                                                            </div>`;
             }
         });
     
