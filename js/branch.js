@@ -55,7 +55,7 @@ window.onload = function () {
                 for (let i = 1; i <= numberOfImages; i++){
                     document.getElementById("video-gallery").innerHTML += `
                                                                             <div class="video">
-                                                                                <video src="../imgs/${folderOfImages}/${i}.mp4" controls></video>
+                                                                                <video src="../imgs/${folderOfImages}/${i}.mp4" controls oncontextmenu="return false"; controlsList="nodownload"></video>
                                                                             </div>`;
                 }
             }
