@@ -12,7 +12,7 @@
         ],
         "images" : "web",
         "imgCount" : "24",
-        "phone" :"01222592846"
+        "phone" :"0"
     },
     {
         "pageTitle" : " تصميم تطبيقات الهاتف",
@@ -28,7 +28,7 @@
         ],
         "images" : "mob",
         "imgCount" : "4",
-        "phone" :"01019691450"
+        "phone" :"0"
     },
     {
         "pageTitle" : " تصميم برامج Desktop",
@@ -43,7 +43,7 @@
         ],
         "images" : "des",
         "imgCount" : "9",
-        "phone" :"01019691450"
+        "phone" :"0"
     },
     {
         "pageTitle" : "خدمة الشحن والتوصيل",
@@ -65,7 +65,7 @@
         ],
         "images" : "gra",
         "imgCount" : "18",
-        "phone" :"01098283570"
+        "phone" :"0"
     },
     {
         "pageTitle" : "تسويق وإدارة صفحات",
@@ -79,7 +79,7 @@
         ],
         "images" : "ads",
         "imgCount" : "8",
-        "phone" :"01090748827"
+        "phone" :"0"
     },
     {
         "pageTitle" : "تصميم موشن جرافيك",
@@ -93,7 +93,7 @@
         ],
         "images" : "mot",
         "imgCount" : "3",
-        "phone" :"01090748827"
+        "phone" :"0"
     },
     {
         "pageTitle" : "مونتاج فيديو",
@@ -107,7 +107,7 @@
         ],
         "images" : "edi",
         "imgCount" : "3",
-        "phone" :"01098283570"
+        "phone" :"0"
     },
     {
         "pageTitle" : "ابحاث، عروض تقديميه وبرامج Excel",
@@ -121,6 +121,6 @@
         ],
         "images" : "ofc",
         "imgCount" : "3",
-        "phone" :"01098283570"
+        "phone" :"0"
     }
 ]
